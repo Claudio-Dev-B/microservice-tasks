@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest",
+    "test": "jest --testTimeout=10000",
     "test:watch": "jest --watch",
+    "test:ci": "jest --ci --reporters=default --reporters=jest-junit",
     "docker:build": "docker build -t microservice-tasks .",
     "docker:run": "docker run -p 3000:3000 microservice-tasks"
   },
@@ -23,6 +24,6 @@
     "nodemon": "^3.0.1"
   },
   "keywords": ["microservice", "tasks", "api", "nodejs"],
-  "author": "Seu Nome",
+  "author": "Cláudio",
   "license": "MIT"
-}
+  }
